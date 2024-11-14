@@ -1,0 +1,184 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #3f3f3f00;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font-family: "American Typewriter", "Marker Felt";
+}
+
+#tetris {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100vh; /* Tinggi penuh layar */
+}
+
+#scene {
+  height: 100%;
+  position: absolute;
+  background: #000000;
+}
+
+#gameOver {
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 999;
+  color: #0077ff;
+  text-align: center;
+  display: none;
+}
+
+#gameOver h1 {
+  margin-top: 50%;
+}
+
+#gameOver a,
+#gameOver a:visited {
+  color: #66bc29;
+  text-decoration: none;
+}
+
+#gameOver h3 {
+  color: rgb(0, 119, 255);
+}
+
+#side {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+
+#info {
+  width: 120px;
+  margin: 0 auto;
+}
+
+#preview {
+  width: 80px;
+  height: 80px;
+  background: #526b77;
+  margin: 10px auto;
+}
+
+#levelInfo {
+  color: #526b77;
+  font-size: 18px;
+  margin: 10px 0;
+}
+#level {
+  color: #526b77;
+  font-size: 32px;
+}
+
+#scoreInfo {
+  color: #526b77;
+  margin-top: 0;
+}
+
+#score {
+  color: #526b77;
+  font-family: "Chalkboard SE";
+}
+
+#rewardInfo {
+  color: yellow;
+  font-weight: bold;
+  height: 20px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.animated {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+
+#controls {
+  bottom: -200px;
+  position: absolute;
+}
+#controls button {
+  padding: 10px;
+  width: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: "American Typewriter", "Marker Felt";
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #526b77; /* Warna latar belakang putih */
+  color: rgb(221, 214, 214); /* Warna teks biru */
+  border: 2px solid #526b77; /* Border biru */
+  border-radius: 50%; /* Membuat bentuk lingkaran */
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.full-image {
+  width: 100vw; /* Lebar penuh viewport */
+  height: 160vh; /* Tinggi penuh viewport */
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+  .full-image {
+    object-position: top;
+  }
+}
