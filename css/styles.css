@@ -171,7 +171,7 @@ html {
 
 .full-image {
   width: 100vw; /* Lebar penuh viewport */
-  height: 160vh; /* Tinggi penuh viewport */
+  height: 165vh; /* Tinggi penuh viewport */
   object-fit: cover;
   object-position: center;
 }
